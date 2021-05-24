@@ -1,6 +1,6 @@
 library(erah)
-load("COS/RI/RI-Project18.02.21/RI-Project/Analysis/Results/Blood/id_eRah.rda")
-load("COS/RI/RI-Project18.02.21/RI-Project/gmdRi.rda")
+load("id_eRah.rda")
+load("gmdRi.rda")
 
 db <- data.frame(matrix(vector(), nrow = length(gmdRi), ncol = 2, 
                         dimnames = list(c(), c("Name", "RI.VAR5.ALK"))))
@@ -21,7 +21,7 @@ testNames <- data.frame(Names = unique(sort(c(idF_info$idF.Name.1,
                                               idF_info$idF.Name.3))))
 
 
-load("COS/RI/RI-Project18.02.21/RI-Project/fgSet/fgGmd_dragonTMS.rda")
+load("fgSet/fgGmd_dragonTMS.rda")
 dataTMS <- as.data.frame(matrix(unlist(fgGmd), 
                                 ncol = ncol(fgGmd), nrow = nrow(fgGmd)), 
                          stringsAsFactors = FALSE)
